@@ -5,7 +5,7 @@ Use Gandi LiveDNS API to update DNS records with a dynamic IP.
 #### Prequisites
 
 - Go to your Gandi account security page: https://account.gandi.net/en/users/USER/security (where USER is your username)
-- Generate your API key, to be copied into your configuration file
+- Generate your API Personal Access Token, to be copied into your configuration file
 - Python 3.x
 
 
@@ -44,7 +44,7 @@ $ python dyn_gandi.py --help
 Complete the `config.ini` file, in particular check the lines :
 ```ini
 [api]
-key =
+token =
 
 [dns]
 domain = 

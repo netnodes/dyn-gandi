@@ -79,7 +79,7 @@ def livedns_handle(domain, ip, records):
     """
 
     # init
-    ldns = LiveDNSClient(url=config['api']['url'], key=config['api']['key'], debug=debug)
+    ldns = LiveDNSClient(url=config['api']['url'], token=config['api']['token'], debug=debug)
 
     # check domain
     r_domain = ldns.get_domain(domain)

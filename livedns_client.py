@@ -9,15 +9,15 @@ from requests import Timeout
 class LiveDNSClient:
     """Gandi LiveDNS API client."""
 
-    def __init__(self, url, key, debug=False):
+    def __init__(self, url, token, debug=False):
         """Gandi LiveDNS API client.
 
-        :param str url: The API url.
-        :param str key: The API key.
+        :param str url: API url.
+        :param str token: API Personal Access Token.
         :param bool debug: Debug flag.
         """
         self.url = url
-        self.key = key
+        self.token = token
         self.debug = debug
 
     def _query_api(self, method, query, json_data=None):
@@ -37,8 +37,7 @@ class LiveDNSClient:
         url = "%s%s" % (self.url, urllib.parse.quote(query))
 
         headers = {
-            "x-api-key":        self.key,
-            "Authorization":    "Apikey %s" % self.key,
+            "Authorization":    "Bearer %s" % self.token,
             "Accept":           "application/json",
         }
 
