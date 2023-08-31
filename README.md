@@ -35,7 +35,7 @@ $ .env\Scripts\activate.bat (Windows)
 Install :
 ```shell
 $ python setup.py develop
-$ copy config.ini-dist config.ini
+$ cp config.ini-dist config.ini
 $ dyn_gandi --help
 -or-
 $ python dyn_gandi.py --help
