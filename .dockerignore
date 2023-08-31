@@ -1,0 +1,4 @@
+# Only allow the listed files
+*
+!*.py
+!requirements.txt
